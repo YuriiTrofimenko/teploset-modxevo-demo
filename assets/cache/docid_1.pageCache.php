@@ -21,16 +21,25 @@
         <div class="container">
             <div class="row">
                 <div class="col s12 m3 l3 xl3">
-            		
-                </div>
-                <div class="col s12 m9 l9 xl9">
-                    <h4>
+            	    <h4>
                         Accounts
                     </h4>
                     <!-- Сюда при помощи jquery помещается шаблон таблицы, заполненный данными о accounts-->
                     <div class="row">
                         <div class="col s12 m12 l12 xl12">
                             <div id="table-container">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m9 l9 xl9">
+                    <h4>
+                        Account details
+                    </h4>
+                    <!-- Сюда при помощи jquery помещается шаблон, заполненный данными account-->
+                    <div class="row">
+                        <div class="col s12 m12 l12 xl12">
+                            <div id="details-container">
                             </div>
                         </div>
                     </div>

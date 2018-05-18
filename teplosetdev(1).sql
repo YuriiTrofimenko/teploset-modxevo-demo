@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 06 2018 г., 15:31
+-- Время создания: Май 18 2018 г., 09:40
 -- Версия сервера: 5.5.53
 -- Версия PHP: 5.5.38
 
@@ -40,7 +40,8 @@ CREATE TABLE `modx_active_users` (
 --
 
 INSERT INTO `modx_active_users` (`sid`, `internalKey`, `username`, `lasthit`, `action`, `id`) VALUES
-('rbkjkef7n88m0jkp2c7rq0cfo6', 1, 'admin', 1525608372, '16', 3);
+('rbkjkef7n88m0jkp2c7rq0cfo6', 1, 'admin', 1525611871, '67', 1),
+('bnu87lq9ugnoqo6kikao6oifk0', 1, 'admin', 1526623739, '16', 3);
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,7 @@ CREATE TABLE `modx_active_user_locks` (
 --
 
 INSERT INTO `modx_active_user_locks` (`id`, `sid`, `internalKey`, `elementType`, `elementId`, `lasthit`) VALUES
-(32, 'rbkjkef7n88m0jkp2c7rq0cfo6', 1, 1, 3, 1525608372);
+(61, 'bnu87lq9ugnoqo6kikao6oifk0', 1, 1, 3, 1526623739);
 
 -- --------------------------------------------------------
 
@@ -82,7 +83,7 @@ CREATE TABLE `modx_active_user_sessions` (
 --
 
 INSERT INTO `modx_active_user_sessions` (`sid`, `internalKey`, `lasthit`, `ip`) VALUES
-('rbkjkef7n88m0jkp2c7rq0cfo6', 1, 1525609903, '127.0.0.1');
+('bnu87lq9ugnoqo6kikao6oifk0', 1, 1526625637, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -281,7 +282,87 @@ INSERT INTO `modx_manager_log` (`id`, `timestamp`, `internalKey`, `username`, `a
 (86, 1525607713, 1, 'admin', 16, '3', 'Minimal Template', 'Editing template'),
 (87, 1525608369, 1, 'admin', 20, '3', 'Minimal Template', 'Saving template'),
 (88, 1525608369, 1, 'admin', 76, '-', '-', 'Element management'),
-(89, 1525608372, 1, 'admin', 16, '3', 'Minimal Template', 'Editing template');
+(89, 1525608372, 1, 'admin', 16, '3', 'Minimal Template', 'Editing template'),
+(90, 1525610696, 1, 'admin', 76, '-', '-', 'Element management'),
+(91, 1525610700, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(92, 1526618496, 1, 'admin', 58, '-', 'MODX', 'Logged in'),
+(93, 1526618497, 1, 'admin', 17, '-', '-', 'Editing settings'),
+(94, 1526618505, 1, 'admin', 27, '2', 'accounts', 'Editing resource'),
+(95, 1526618537, 1, 'admin', 76, '-', '-', 'Element management'),
+(96, 1526618539, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(97, 1526618818, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(98, 1526618818, 1, 'admin', 76, '-', '-', 'Element management'),
+(99, 1526618821, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(100, 1526618859, 1, 'admin', 26, '-', '-', 'Refreshing site'),
+(101, 1526618942, 1, 'admin', 76, '-', '-', 'Element management'),
+(102, 1526618943, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(103, 1526620038, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(104, 1526620041, 1, 'admin', 76, '-', '-', 'Element management'),
+(105, 1526620043, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(106, 1526620078, 1, 'admin', 26, '-', '-', 'Refreshing site'),
+(107, 1526620098, 1, 'admin', 27, '2', 'accounts', 'Editing resource'),
+(108, 1526620102, 1, 'admin', 27, '2', 'accounts', 'Editing resource'),
+(109, 1526620105, 1, 'admin', 76, '-', '-', 'Element management'),
+(110, 1526620107, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(111, 1526620182, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(112, 1526620182, 1, 'admin', 76, '-', '-', 'Element management'),
+(113, 1526620185, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(114, 1526620188, 1, 'admin', 26, '-', '-', 'Refreshing site'),
+(115, 1526620220, 1, 'admin', 76, '-', '-', 'Element management'),
+(116, 1526620222, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(117, 1526620283, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(118, 1526620283, 1, 'admin', 76, '-', '-', 'Element management'),
+(119, 1526620309, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(120, 1526620316, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(121, 1526620316, 1, 'admin', 76, '-', '-', 'Element management'),
+(122, 1526620338, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(123, 1526620349, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(124, 1526620349, 1, 'admin', 76, '-', '-', 'Element management'),
+(125, 1526620351, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(126, 1526620606, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(127, 1526620606, 1, 'admin', 76, '-', '-', 'Element management'),
+(128, 1526620608, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(129, 1526620636, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(130, 1526620636, 1, 'admin', 76, '-', '-', 'Element management'),
+(131, 1526620638, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(132, 1526620676, 1, 'admin', 26, '-', '-', 'Refreshing site'),
+(133, 1526620690, 1, 'admin', 76, '-', '-', 'Element management'),
+(134, 1526620691, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(135, 1526621161, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(136, 1526621161, 1, 'admin', 76, '-', '-', 'Element management'),
+(137, 1526621192, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(138, 1526621340, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(139, 1526621340, 1, 'admin', 76, '-', '-', 'Element management'),
+(140, 1526621381, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(141, 1526621404, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(142, 1526621404, 1, 'admin', 76, '-', '-', 'Element management'),
+(143, 1526621414, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(144, 1526621438, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(145, 1526621438, 1, 'admin', 76, '-', '-', 'Element management'),
+(146, 1526621498, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(147, 1526621539, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(148, 1526621539, 1, 'admin', 76, '-', '-', 'Element management'),
+(149, 1526621543, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(150, 1526621584, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(151, 1526621584, 1, 'admin', 76, '-', '-', 'Element management'),
+(152, 1526621609, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(153, 1526621628, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(154, 1526621628, 1, 'admin', 76, '-', '-', 'Element management'),
+(155, 1526621643, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(156, 1526621679, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(157, 1526621679, 1, 'admin', 76, '-', '-', 'Element management'),
+(158, 1526621689, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(159, 1526621710, 1, 'admin', 24, '1', 'accounts', 'Saving Snippet'),
+(160, 1526621710, 1, 'admin', 76, '-', '-', 'Element management'),
+(161, 1526621712, 1, 'admin', 22, '1', 'accounts', 'Editing Snippet'),
+(162, 1526622282, 1, 'admin', 26, '-', '-', 'Refreshing site'),
+(163, 1526623589, 1, 'admin', 76, '-', '-', 'Element management'),
+(164, 1526623595, 1, 'admin', 78, '1', 'accountsAjax', 'Editing Chunk (HTML Snippet)'),
+(165, 1526623608, 1, 'admin', 76, '-', '-', 'Element management'),
+(166, 1526623614, 1, 'admin', 16, '3', 'Minimal Template', 'Editing template'),
+(167, 1526623737, 1, 'admin', 20, '3', 'Minimal Template', 'Saving template'),
+(168, 1526623737, 1, 'admin', 76, '-', '-', 'Element management'),
+(169, 1526623739, 1, 'admin', 16, '3', 'Minimal Template', 'Editing template');
 
 -- --------------------------------------------------------
 
@@ -579,7 +660,7 @@ CREATE TABLE `modx_site_snippets` (
 --
 
 INSERT INTO `modx_site_snippets` (`id`, `name`, `description`, `editor_type`, `category`, `cache_type`, `snippet`, `locked`, `properties`, `moduleguid`) VALUES
-(1, 'accounts', '', 0, 4, 0, '\r\n//if ($_SERVER[\'HTTP_X_REQUESTED_WITH\'] == \'XMLHttpRequest\') {\r\n$base_url = \"http://192.168.0.106:8080/TeplosetEJB-war\";\r\n$accounts_url = \"/account\";\r\n$inputJson = file_get_contents($base_url.$accounts_url);\r\n$output = \"hello!\";\r\nreturn $inputJson; \r\n//}', 0, '{}', ' ');
+(1, 'accounts', '', 0, 4, 0, '\r\n//if ($_SERVER[\'HTTP_X_REQUESTED_WITH\'] == \'XMLHttpRequest\') {\r\n$base_url = \"http://192.168.0.106:8080/TeplosetEJB-war\";\r\n$accounts_url = \"/account\";\r\n\r\n\r\nif(isset($_REQUEST[\'action\'])){\r\n\r\n    switch ($_REQUEST[\'action\']) {\r\n    	case \'fetch-range\':\r\n    		$accounts_url =\r\n    			$accounts_url.\"?action=fetch-range&from=\".$_REQUEST[\'from\'].\"&to=\".$_REQUEST[\'to\'];\r\n    		break;\r\n    	case \'fetch-by-id\':\r\n    		$accounts_url =\r\n    			$accounts_url.\"?action=fetch-by-id&id=\".$_REQUEST[\'id\'];\r\n    		break;\r\n    	default:\r\n    		# code...\r\n    		break;\r\n    }\r\n}\r\n\r\n$inputJson = file_get_contents($base_url.$accounts_url);\r\nreturn $inputJson;\r\n//return $accounts_url ;\r\n//}', 0, '{}', ' ');
 
 -- --------------------------------------------------------
 
@@ -605,7 +686,7 @@ CREATE TABLE `modx_site_templates` (
 --
 
 INSERT INTO `modx_site_templates` (`id`, `templatename`, `description`, `editor_type`, `category`, `icon`, `template_type`, `content`, `locked`, `selectable`) VALUES
-(3, 'Minimal Template', 'Default minimal empty template (content returned only)', 0, 0, '', 0, '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n            <meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\r\n                <title>\r\n                    Teploset - accounts demo\r\n                </title>\r\n                <!--Import Google Icon Font-->\r\n                <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\r\n                    <!--Import materialize.css-->\r\n                    <link href=\"/assets/css/materialize.min.css\" media=\"screen,projection\" rel=\"stylesheet\" type=\"text/css\"/>\r\n                </link>\r\n                <link href=\"/assets/css/custom.css\" media=\"screen,projection\" rel=\"stylesheet\" type=\"text/css\"/>\r\n                </link>\r\n            </meta>\r\n        </meta>\r\n    </head>\r\n    <body>\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col s12 m3 l3 xl3\">\r\n            		\r\n                </div>\r\n                <div class=\"col s12 m9 l9 xl9\">\r\n                    <h4>\r\n                        Accounts\r\n                    </h4>\r\n                    <!-- Сюда при помощи jquery помещается шаблон таблицы, заполненный данными о accounts-->\r\n                    <div class=\"row\">\r\n                        <div class=\"col s12 m12 l12 xl12\">\r\n                            <div id=\"table-container\">\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <script src=\"/assets/js/custom/jquery-3.3.1.min.js\" type=\"text/javascript\">\r\n        </script>\r\n        <!--JavaScript at end of body for optimized loading-->\r\n        <script src=\"/assets/js/custom/materialize.min.js\" type=\"text/javascript\">\r\n        </script>\r\n        <script src=\"/assets/js/custom/hogan-3.0.2.min.js\" type=\"text/javascript\">\r\n        </script>\r\n        <script src=\"/assets/js/custom/custom.js\" type=\"text/javascript\">\r\n        </script>\r\n    </body>\r\n</html>', 0, 1),
+(3, 'Minimal Template', 'Default minimal empty template (content returned only)', 0, 0, '', 0, '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n            <meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\r\n                <title>\r\n                    Teploset - accounts demo\r\n                </title>\r\n                <!--Import Google Icon Font-->\r\n                <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\r\n                    <!--Import materialize.css-->\r\n                    <link href=\"/assets/css/materialize.min.css\" media=\"screen,projection\" rel=\"stylesheet\" type=\"text/css\"/>\r\n                </link>\r\n                <link href=\"/assets/css/custom.css\" media=\"screen,projection\" rel=\"stylesheet\" type=\"text/css\"/>\r\n                </link>\r\n            </meta>\r\n        </meta>\r\n    </head>\r\n    <body>\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col s12 m3 l3 xl3\">\r\n            	    <h4>\r\n                        Accounts\r\n                    </h4>\r\n                    <!-- Сюда при помощи jquery помещается шаблон таблицы, заполненный данными о accounts-->\r\n                    <div class=\"row\">\r\n                        <div class=\"col s12 m12 l12 xl12\">\r\n                            <div id=\"table-container\">\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col s12 m9 l9 xl9\">\r\n                    <h4>\r\n                        Account details\r\n                    </h4>\r\n                    <!-- Сюда при помощи jquery помещается шаблон, заполненный данными account-->\r\n                    <div class=\"row\">\r\n                        <div class=\"col s12 m12 l12 xl12\">\r\n                            <div id=\"details-container\">\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <script src=\"/assets/js/custom/jquery-3.3.1.min.js\" type=\"text/javascript\">\r\n        </script>\r\n        <!--JavaScript at end of body for optimized loading-->\r\n        <script src=\"/assets/js/custom/materialize.min.js\" type=\"text/javascript\">\r\n        </script>\r\n        <script src=\"/assets/js/custom/hogan-3.0.2.min.js\" type=\"text/javascript\">\r\n        </script>\r\n        <script src=\"/assets/js/custom/custom.js\" type=\"text/javascript\">\r\n        </script>\r\n    </body>\r\n</html>', 0, 1),
 (4, 'accounts', '', 0, 2, '', 0, '{{accountsAjax}}', 0, 1);
 
 -- --------------------------------------------------------
@@ -899,7 +980,7 @@ CREATE TABLE `modx_user_attributes` (
 --
 
 INSERT INTO `modx_user_attributes` (`id`, `internalKey`, `fullname`, `role`, `email`, `phone`, `mobilephone`, `blocked`, `blockeduntil`, `blockedafter`, `logincount`, `lastlogin`, `thislogin`, `failedlogincount`, `sessionid`, `dob`, `gender`, `country`, `street`, `city`, `state`, `zip`, `fax`, `photo`, `comment`) VALUES
-(1, 1, 'Default admin account', 1, 'tyaa@ukr.net', '', '', 0, 0, 0, 1, 0, 1525604850, 0, 'rbkjkef7n88m0jkp2c7rq0cfo6', 0, 0, '', '', '', '', '', '', '', '');
+(1, 1, 'Default admin account', 1, 'tyaa@ukr.net', '', '', 0, 0, 0, 2, 1525604850, 1526618496, 0, 'bnu87lq9ugnoqo6kikao6oifk0', 0, 0, '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1406,7 +1487,7 @@ ALTER TABLE `modx_web_user_settings`
 -- AUTO_INCREMENT для таблицы `modx_active_user_locks`
 --
 ALTER TABLE `modx_active_user_locks`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT для таблицы `modx_categories`
 --
@@ -1431,7 +1512,7 @@ ALTER TABLE `modx_event_log`
 -- AUTO_INCREMENT для таблицы `modx_manager_log`
 --
 ALTER TABLE `modx_manager_log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
 --
 -- AUTO_INCREMENT для таблицы `modx_manager_users`
 --

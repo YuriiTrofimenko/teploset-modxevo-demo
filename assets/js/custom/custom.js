@@ -11,13 +11,15 @@ $(document).ready(function() {
             dataType: 'json',
             type: "POST",
             data: { 
-                'action': 'fetch-accounts'
+                action: 'fetch-range'
+                , from: '350'
+                , to: '355'
             },
             cache : false
-        }).done(function(data) {
+        }).done(function(resp) {
 
             //Готовим шаблон таблицы accounts при помощи библиотеки Hogan
-            /*var template = Hogan.compile(
+            var template = Hogan.compile(
                 '<table class="table">'
                 +  '<thead>'
                 +    '<tr>'
@@ -27,29 +29,59 @@ $(document).ready(function() {
                 +    '</tr>'
                 +  '</thead>'
                 +  '<tbody>'
-                +       '{{#accounts}}'
+                +       '{{#data}}'
                 +           '<tr>'
                 +               '<th scope="row">{{code}}</th>'
                 +               '<td>{{fio}}</td>'
                 +               '<td>{{phone}}</td>'
                 +            '</tr>'
-                +        '{{/accounts}}'
+                +        '{{/data}}'
                 +   '</tbody>'
                 + '</table>'
-            );*/
-            var template = Hogan.compile(
-                '<div>'
-                +  '<span>code: {{code}}</span>'
-                + '</div>'
-                + '<div>'
-                +  '<span>fio: {{fio}}</span>'
-                + '</div>'
-                + '<div>'
-                +  '<span>phone: {{phone}}</span>'
-                + '</div>'
             );
+
             //Заполняем шаблон данными и помещаем на веб-страницу
-            $('#table-container').html(template.render(data));
+            $('#table-container').html(template.render(resp));
+
+            //Устанавливаем обработчик кликов на все строки таблицы кроме заголовка
+            $("table tr:not(:first)").unbind("click");
+            $("table tr:not(:first)").click(function(){
+
+                //Отмечаем текст выбранной строки зеленым цветом, с остальных строк выделение убираем
+                //(оно могло быть ранее установлено на одну из строк)
+                $(this).addClass("selectedTableRow").siblings().removeClass("selectedTableRow");
+                var accountCode = $(this).find('th').text();
+                $('#details-container').html("<div class='progress'><div class='indeterminate'></div></div>");
+                $.ajax({
+                    url: "/accounts",
+                    dataType: 'json',
+                    type: "POST",
+                    data: { 
+                        action: 'fetch-by-id'
+                        , id: accountCode
+                    },
+                    cache : false
+                }).done(function(resp) {
+
+                    //Готовим шаблон account при помощи библиотеки Hogan
+                    var template = Hogan.compile(
+                        '<div>'
+                        +  '<span>code: {{code}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>fio: {{fio}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>phone: {{phone}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>address: {{house.street.kind}} {{house.street.name}}, {{house.number}}, кв. {{flat}}</span>'
+                        + '</div>'
+                    );
+                    //Заполняем шаблон данными и помещаем на веб-страницу
+                    $('#details-container').html(template.render(resp));
+                });
+            });
         });
     }
     //Вызываем функцию заполнения таблицы данными о accounts
