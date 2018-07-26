@@ -12,8 +12,8 @@ $(document).ready(function() {
             type: "POST",
             data: { 
                 action: 'fetch-range'
-                , from: '350'
-                , to: '355'
+                , from: '420'
+                , to: '450'
             },
             cache : false
         }).done(function(resp) {
@@ -66,20 +66,62 @@ $(document).ready(function() {
                     //Готовим шаблон account при помощи библиотеки Hogan
                     var template = Hogan.compile(
                         '<div>'
-                        +  '<span>code: {{code}}</span>'
+                        +  '<span>лицевой счет: {{code}}</span>'
                         + '</div>'
                         + '<div>'
-                        +  '<span>fio: {{fio}}</span>'
+                        +  '<span{{address}}</span>'
                         + '</div>'
                         + '<div>'
-                        +  '<span>phone: {{phone}}</span>'
+                        +  '<span>Основной квартиросъемщик: {{fio}}</span>'
                         + '</div>'
                         + '<div>'
-                        +  '<span>address: {{house.street.kind}} {{house.street.name}}, {{house.number}}, кв. {{flat}}</span>'
+                        +  '<span>Телефоны абонента: {{phone}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>ЦТП: {{heatpoint}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>Район: {{area}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>Котельная: -</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>{{areaAddress}}</span>'
                         + '</div>'
                     );
                     //Заполняем шаблон данными и помещаем на веб-страницу
                     $('#details-container').html(template.render(resp));
+
+                    //Готовим шаблон account при помощи библиотеки Hogan
+                    /*var template = Hogan.compile(
+                        '<div>'
+                        +  '<span>лицевой счет: {{code}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>Адрес: {{house.street.kind}} {{house.street.name}} дом {{house.number}} кв. {{flat}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>Основной квартиросъемщик: {{fio}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>Телефоны абонента: {{phone}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>ЦТП: -</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>Район: {{house.area.name}}</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>Котельная: -</span>'
+                        + '</div>'
+                        + '<div>'
+                        +  '<span>Адрес и телефон абонентного участка: {{house.area.address}}, {{house.area.remark}} {{house.area.phone}}, {{house.area.phoneTi}}</span>'
+                        + '</div>'
+                    );
+                    //Заполняем шаблон данными и помещаем на веб-страницу
+                    $('#details-container').html(template.render(resp));*/
                 });
             });
         });
