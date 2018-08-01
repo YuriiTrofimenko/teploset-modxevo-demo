@@ -12,8 +12,8 @@ $(document).ready(function() {
             type: "POST",
             data: { 
                 action: 'fetch-range'
-                , from: '420'
-                , to: '450'
+                , from: '50150'
+                , to: '50200'
             },
             cache : false
         }).done(function(resp) {
@@ -84,7 +84,7 @@ $(document).ready(function() {
                         +  '<span>Район: {{area}}</span>'
                         + '</div>'
                         + '<div>'
-                        +  '<span>Котельная: -</span>'
+                        +  '<span>Котельная: {{boiler}}</span>'
                         + '</div>'
                         + '<div>'
                         +  '<span>{{areaAddress}}</span>'
